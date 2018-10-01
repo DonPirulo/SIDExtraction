@@ -5,7 +5,7 @@ import re
 from io import StringIO, BytesIO
 from lxml import etree
 from neo4jrestclient.client import GraphDatabase
-gdb = GraphDatabase("http://localhost:7474/db/data/", username="neo4j", password="S3r3ngu3")
+gdb = GraphDatabase("http://xxxxxx:7474/db/data/", username="xxxxx", password="xxxxx") ## IP, Username and pass of the Neo4j Database
 
 import xml.etree.ElementTree as ET
 
