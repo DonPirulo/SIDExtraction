@@ -13,7 +13,7 @@ class rpcget(object):
     def __init__(self):
 
         credentials = pika.PlainCredentials('admin', 'admin')
-        parameters = pika.ConnectionParameters('7.188.101.16',
+        parameters = pika.ConnectionParameters('xxxxxxx', ##Broker IP
                                                5672, '/',
                                                credentials)
 
@@ -100,14 +100,10 @@ def main():
     s = ','.join(map(str, servicios))
     strtransit = ','.join(map(str, transitos))
 
-    s = s.replace('[', '').replace(']', '').replace("'", '').replace("55259", '').replace("18747", '').replace(",,", ',').replace(",,", ',').replace(" ", '').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace("15259", '').replace("10002", '').replace(",,", ',')
-    strtransit = strtransit.replace('[', '').replace(']', '').replace("'", '').replace("55259", '').replace("18747", '').replace(",,", ',').replace(",,", ',').replace(" ", '').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace(",,", ',').replace("15259", '').replace("10002", '').replace(",,", ',').replace(",,", ',').replace("15002", '').replace("10001", '')
-
-    print("Son %s servicios configurados en el router y %s transitos" % (contadorconfigurados, contadortransitos))
-    print("Configurados:", s)
-    print("Transitos:   ",strtransit)
-
-    print("C'ya at Disney, my friend")
+ 
+    print("%s services configured on the router and %s transits" % (contadorconfigurados, contadortransitos))
+    print("Configured:", s)
+    print("Transit:   ",strtransit)
 
 if __name__ == '__main__':
     main()
